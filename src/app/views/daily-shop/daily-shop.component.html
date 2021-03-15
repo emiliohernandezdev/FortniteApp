@@ -1,6 +1,12 @@
+<div class="card text-white bg-primary mb-3 w-92 ml-4 mr-4">
+    <div class="card-header"><center>Tiempo para la siguiente tienda:</center></div>
+    <div class="card-body">
+      <center><h2 class="card-title">{{hours}}h {{minutes}}m {{seconds}}s</h2></center>
+    </div>
+  </div>
 <div *ngIf="hasData">
     <div class="card text-center" [ngSwitch]="daily">
-        <div class="card-header">{{daily.name}}</div>
+        <div class="card-header bg-primary text-white">{{daily.name}}</div>
         <div class="card-body">
             <div class="container">
                 <div class="row">
@@ -57,7 +63,7 @@
 
 
     <div class="card text-center" [ngSwitch]="featured">
-        <div class="card-header">{{featured.name}}</div>
+        <div class="card-header bg-primary text-white">{{featured.name}}</div>
         <div class="card-body">
             <div class="container">
                 <div class="row">
@@ -112,7 +118,7 @@
 
     
     <div class="card text-center" [ngSwitch]="specialFeatured">
-        <div class="card-header">DESTACADO ESPECIAL</div>
+        <div class="card-header bg-primary text-white">DESTACADO ESPECIAL</div>
         <div class="card-body">
             <div class="container">
                 <div class="row">
@@ -120,7 +126,7 @@
                     <div class="card">
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light" [ngSwitch]="obj.items[0].rarity.value">
                           <img *ngSwitchCase="'epic'" style="background: radial-gradient(circle, rgba(135,63,251,1) 0%, rgba(107,50,165,1) 100%);"
-                            [src]="obj.items[0].images.featured || obj.items[0].images.icon || obj.bundle.image"
+                            [src]="obj.items[0].images.featured || obj.items[0].images.icon"
                             class="img-fluid" 
                           />
                           <img *ngSwitchCase="'rare'" style="background: radial-gradient(circle, rgba(26,125,159,1) 0%, rgba(26,98,159,1) 100%);"

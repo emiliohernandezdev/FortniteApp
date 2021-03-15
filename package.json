@@ -26,6 +26,9 @@
     "angular-calendar": "^0.25.2",
     "chart.js": "^2.7.3",
     "core-js": "^2.5.4",
+    "moment": "^2.29.1",
+    "ngx-countdown": "^11.0.3",
+    "ngx-spinner": "^10.0.1",
     "rxjs": "~6.5.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

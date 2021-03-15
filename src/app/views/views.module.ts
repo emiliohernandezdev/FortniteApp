@@ -21,6 +21,7 @@ import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home.component';
 import { DailyShopComponent } from './daily-shop/daily-shop.component';
 import { MapComponent } from './map/map.component';
+import { CosmeticsComponent } from './cosmetics/cosmetics.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { MapComponent } from './map/map.component';
     HomeComponent,
     DailyShopComponent,
     MapComponent,
+    CosmeticsComponent,
 
   ],
   exports: [

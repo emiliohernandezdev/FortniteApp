@@ -24,6 +24,13 @@ import { DailyShopComponent } from './views/daily-shop/daily-shop.component';
 import { MapComponent } from './views/map/map.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ShopService } from './services/shop.service';
+import { MapService } from './services/map.service';
+import { HttpConfigInterceptor } from './http.interceptor';
+import { CountdownModule } from 'ngx-countdown';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { CosmeticsComponent } from './views/cosmetics/cosmetics.component';
+import { CosmeticService } from './services/cosmetic.service';
+
 const routes: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
@@ -50,6 +57,9 @@ const routes: Route[] = [
         path: 'current/:language', component: MapComponent
       }
     ]
+  },
+  {
+    path: "cosmetics", component: CosmeticsComponent
   },
   { path: 'dashboards', children:
     [
@@ -95,10 +105,15 @@ const routes: Route[] = [
     ErrorModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CountdownModule,
+    NgxSpinnerModule
   ],
   providers: [
-    ShopService
+    ShopService,
+    MapService,
+    CosmeticService,
+    HttpConfigInterceptor
   ],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]

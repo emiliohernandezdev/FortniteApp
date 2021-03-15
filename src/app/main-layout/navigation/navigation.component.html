@@ -5,7 +5,7 @@
     <div class="sidebar-fixed position-fixed">
 
         <a class="logo-wrapper waves-effect">
-            <img src="../../../../assets/img/skyblue.png" class="img-fluid" alt="">
+            <img src="../../../../assets/img/fortnite_black.png" class="image" alt="">
         </a>
 
         <div class="list-group list-group-flush">
@@ -16,14 +16,11 @@
             <a routerLink="daily-itemshop" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
                 <mdb-icon fas icon="shopping-cart" class="mr-3"></mdb-icon>Tienda de objetos
             </a>
+            <a routerLink="cosmetics" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="tshirt" class="mr-3"></mdb-icon>Cosméticos
+            </a>
             <a routerLink="map" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
                 <mdb-icon fas icon="map" class="mr-3"></mdb-icon>Mapa</a>
-            <a routerLink="tables/table1" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-                <mdb-icon fas icon="table" class="mr-3"></mdb-icon>Tienda diaria</a>
-            <a routerLink="maps/map1" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-                <mdb-icon far icon="map" class="mr-3"></mdb-icon>Nuevos objetos</a>
-            <a routerLink="nonExistingPath" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-                <mdb-icon fas icon="exclamation" class="mr-3"></mdb-icon>404</a>
 
         </div>
 
@@ -34,30 +31,35 @@
     <mdb-navbar [containerInside]="false" SideClass="navbar navbar-expand-lg navbar-light white">
 
         <!-- Navbar brand -->
-        <logo class="ml-3">
+        <logo class="ml-3" class="d-sm-block d-md-none">
             <a class="navbar-brand" href="https://mdbootstrap.com/angular/angular-bootstrap-getting-started/">
-                <strong class="blue-text">MDB</strong>
+                <strong class="blue-text">Fortnite</strong>
             </a>
         </logo>
 
         <!-- Collapsible content -->
-        <links>
+        <links class="d-sm-block d-md-none">
 
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" mdbWavesEffect>Home
-                        <span class="sr-only">(current)</span>
+                <li class="nav-item">
+                    <a routerLink="home" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                        <mdb-icon fas icon="home" class="mr-3"></mdb-icon>Inicio
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://mdbootstrap.com/angular/angular-bootstrap-getting-started/" target="_blank" mdbWavesEffect>About MDB</a>
+                    <a routerLink="daily-itemshop" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                        <mdb-icon fas icon="shopping-cart" class="mr-3"></mdb-icon>Tienda de objetos
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://mdbootstrap.com/angular/getting-started/" target="_blank" mdbWavesEffect>Free download</a>
+                    <a routerLink="cosmetics" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                        <mdb-icon fas icon="tshirt" class="mr-3"></mdb-icon>Cosméticos
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://mdbootstrap.com/angular/angular-tutorial/" target="_blank" mdbWavesEffect>Free tutorials</a>
+                    <a routerLink="map" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                        <mdb-icon fas icon="map" class="mr-3"></mdb-icon>Mapa</a>
                 </li>
             </ul>
             <!-- Links -->
@@ -65,26 +67,7 @@
             <!-- Search form -->
             <ul class="navbar-nav nav-flex-icons">
 
-                    <li class="nav-item">
-                        <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank" mdbWavesEffect>
-                            <mdb-icon fab icon="facebook-f"></mdb-icon>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://twitter.com/MDBootstrap" class="nav-link" target="_blank" mdbWavesEffect>
-                            <mdb-icon fab icon="twitter"></mdb-icon>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light"
-                            target="_blank" mdbWavesEffect>
-                            <mdb-icon fab icon="github" class="mr-2"></mdb-icon>MDB GitHub
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://mdbootstrap.com/products/angular-ui-kit/" class="ml-1 nav-link border border-light rounded" mdbWavesEffect>
-                            <mdb-icon far icon="gem" class=" left"></mdb-icon> Go Pro</a>
-                    </li>
+
                 </ul>
         </links>
         <!-- Collapsible content -->

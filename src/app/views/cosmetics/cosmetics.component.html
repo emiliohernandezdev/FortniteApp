@@ -1,0 +1,78 @@
+<div class="card text-center" *ngIf="cosmetics">
+    <div class="card-header bg-primary text-white">
+        <h2>Cosméticos filtrados:</h2>
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-4" *ngFor="let obj of cosmetics.items">
+                <div class="card">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light" [ngSwitch]="obj.rarity.value">
+                      <img *ngSwitchCase="'epic'" style="background: radial-gradient(circle, rgba(135,63,251,1) 0%, rgba(107,50,165,1) 100%);"
+                        [src]="obj.images.featured || obj.images.icon || obj.images.smallIcon"
+                        class="img-fluid" 
+                      />
+                      <img *ngSwitchCase="'rare'" style="background: radial-gradient(circle, rgba(26,125,159,1) 0%, rgba(26,98,159,1) 100%);"
+                      [src]="obj.images.featured || obj.images.icon || obj.images.smallIcon"
+                      class="img-fluid" 
+                      />
+                      <img *ngSwitchCase="'icon'" style="background: radial-gradient(circle, rgba(2,78,69,1) 0%, rgba(2,62,78,1) 100%);"
+                      [src]="obj.images.featured || obj.images.icon || obj.images.smallIcon"
+                      class="img-fluid" 
+                      />
+                      <img *ngSwitchCase="'uncommon'" style="background: radial-gradient(circle, rgba(83,100,23,1) 0%, rgba(38,100,23,1) 100%);"
+                      [src]="obj.images.featured || obj.images.icon || obj.images.smallIcon"
+                      class="img-fluid" 
+                      />
+                      <img *ngSwitchCase="'legendary'" style="background: radial-gradient(circle, rgba(147,106,9,1) 0%, rgba(147,55,9,1) 100%);"
+                      [src]="obj.images.featured || obj.images.icon || obj.images.smallIcon"
+                      class="img-fluid" 
+                      />
+                      <img *ngSwitchCase="'gamingleyends'" style="background: radial-gradient(circle, rgba(109,77,156,1) 0%, rgba(34,14,47,1) 100%);"
+                      [src]="obj.images.featured || obj.images.icon || obj.images.smallIcon"
+                      class="img-fluid" 
+                      />
+                      <img *ngSwitchCase="'marvel'" style="background: radial-gradient(circle, rgba(172,93,93,1) 0%, rgba(179,19,18,1) 100%);"
+                      [src]="obj.images.featured || obj.images.icon || obj.images.smallIcon"
+                      class="img-fluid" 
+                      />
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                      </a>
+                    </div>
+                    <div >
+                        <div class="card-body">
+                            <h5 class="card-title"><b>{{obj.name}}</b></h5>
+                            <p class="card-text">
+                              {{obj.description}}
+                            </p>
+                            <span class="badge bg-primary text-white">{{obj.type.displayValue}}</span>
+                          </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <h4 class="card-header"><b>Buscar cosméticos</b></h4>
+    <div class="card-body">
+      <h5 class="card-title">Criterios de búsqueda:</h5>
+      <form>
+        <div class="input-group mb-3">
+            <select>
+                <option disabled>Seleccionar un campo</option>
+                <option value="name">Nombre</option>
+                <option value="rarity">Rareza</option>
+            </select>&nbsp;
+  
+            <div class="form-outline">
+              <input type="text" id="typeText" placeholder="Ingresa valor" class="form-control" />
+            </div>
+            <button type="button" class="btn btn-primary">Agregar filtro</button>
+        </div>
+      </form>
+
+    </div>
+  </div>

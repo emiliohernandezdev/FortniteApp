@@ -1,4 +1,4 @@
-@font-face {
-    font-family: 'FortFont';
-    src: url('../assets/font/BurbankBigCondensed-Black.otf')  format('truetype');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
 }

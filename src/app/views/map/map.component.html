@@ -1,1 +1,18 @@
-<p>map works!</p>
+<div class="btn-group">
+    <a (click)="changeMode()" class="btn btn-primary" [ngClass]="{'active': source == mapBlank}">Mapa en blanco</a>
+    <a (click)="changeMode()" class="btn btn-primary" [ngClass]="{'active': source == mapPois}">Mapa con localizaciones</a>
+</div>
+<hr/>
+<div class="card bg-dark text-white">
+    <img
+      [src]="source"
+      class="card-img"
+      alt="..."
+    />
+    <div class="card-img-overlay">
+      <h5 class="card-title">Mapa actual</h5>
+      <p class="card-text">
+          Así se encuentra el mapa en estos momentos:
+      </p>
+    </div>
+  </div>
