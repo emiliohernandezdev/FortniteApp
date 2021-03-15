@@ -30,6 +30,8 @@ import { CountdownModule } from 'ngx-countdown';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { CosmeticsComponent } from './views/cosmetics/cosmetics.component';
 import { CosmeticService } from './services/cosmetic.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const routes: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -107,7 +109,8 @@ const routes: Route[] = [
     ReactiveFormsModule,
     HttpClientModule,
     CountdownModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     ShopService,
