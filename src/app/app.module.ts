@@ -22,7 +22,8 @@ import { NavigationModule } from './main-layout/navigation/navigation.module';
 import { HomeComponent } from './views/home/home.component';
 import { DailyShopComponent } from './views/daily-shop/daily-shop.component';
 import { MapComponent } from './views/map/map.component';
-
+import {HttpClientModule} from "@angular/common/http";
+import { ShopService } from './services/shop.service';
 const routes: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
@@ -93,9 +94,12 @@ const routes: Route[] = [
     ViewsModule,
     ErrorModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ShopService
+  ],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
 })

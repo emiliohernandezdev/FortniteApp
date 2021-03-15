@@ -1,1 +1,58 @@
-<p>daily-shop works!</p>
+<div *ngIf="hasData">
+    <div class="card text-center" [ngSwitch]="daily">
+        <div class="card-header">{{daily.name}}</div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm" *ngFor="let obj of daily.entries">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light" [ngSwitch]="obj.items[0].rarity.value">
+                          <img *ngSwitchCase="'epic'" style="background: radial-gradient(circle, rgba(135,63,251,1) 0%, rgba(107,50,165,1) 100%);"
+                            [src]="obj.items[0].images.featured || obj.items[0].images.icon"
+                            class="img-fluid" 
+                          />
+                          <img *ngSwitchCase="'rare'" style="background: radial-gradient(circle, rgba(26,125,159,1) 0%, rgba(26,98,159,1) 100%);"
+                          [src]="obj.items[0].images.featured || obj.items[0].images.icon"
+                          class="img-fluid" 
+                          />
+                          <img *ngSwitchCase="'icon'" style="background: radial-gradient(circle, rgba(2,78,69,1) 0%, rgba(2,62,78,1) 100%);"
+                          [src]="obj.items[0].images.featured || obj.items[0].images.icon"
+                          class="img-fluid" 
+                          />
+                          <img *ngSwitchCase="'uncommon'" style="background: radial-gradient(circle, rgba(83,100,23,1) 0%, rgba(38,100,23,1) 100%);"
+                          [src]="obj.items[0].images.featured || obj.items[0].images.icon"
+                          class="img-fluid" 
+                          />
+                          <img *ngSwitchCase="'legendary'" style="background: radial-gradient(circle, rgba(147,106,9,1) 0%, rgba(147,55,9,1) 100%);"
+                          [src]="obj.items[0].images.featured || obj.items[0].images.icon"
+                          class="img-fluid" 
+                          />
+                          <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                          </a>
+                        </div>
+                        <div >
+                            <div class="card-body">
+                                <h5 class="card-title"><b>{{obj.items[0].name}}</b></h5>
+                                <p class="card-text">
+                                  {{obj.items[0].description}}
+                                </p>
+                                <p>Precio: <img src="../../../assets/img/vbucks.png" width="18" height="18">{{obj.finalPrice}}</p>
+                              </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card text-center" [ngSwitch]="featured">
+        <div class="card-header">{{featured.name}}</div>
+        <div class="card-body">
+
+
+   
+        </div>
+    </div>
+  
+</div>
