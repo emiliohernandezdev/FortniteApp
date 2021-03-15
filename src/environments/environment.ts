@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  endpoint: "https://fortnite-api.com/",
+  apiKey: "122b050a1745dd600da01887105f9a15424bd8e5"
 };
 
 /*
