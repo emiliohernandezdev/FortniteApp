@@ -1,7 +1,7 @@
 {
     "theme_color": "#047caf",
-    "background_color": "#e791fe",
-    "display": "fullscreen",
+    "background_color": "#d170eb",
+    "display": "standalone",
     "scope": "/",
     "start_url": "/",
     "name": "FortiApp",
